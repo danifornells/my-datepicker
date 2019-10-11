@@ -1,0 +1,19 @@
+{
+  "name": "my-datepicker",
+  "version": "1.0.0",
+  "description": "A datepicker could fit into a multi-brand design system ",
+  "scripts": {
+    "storybook": "start-storybook"
+  },
+  "author": "Daniel Fornells",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@storybook/react": "^5.2.3",
+    "babel-loader": "^8.0.6",
+    "react-dom": "^16.10.2"
+  },
+  "peerDependencies": {
+    "react": "^16.10.2"
+  }
+}
