@@ -10,8 +10,17 @@
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@storybook/react": "^5.2.3",
+    "autoprefixer": "^9.6.4",
     "babel-loader": "^8.0.6",
-    "react-dom": "^16.10.2"
+    "classnames": "^2.2.6",
+    "css-loader": "^3.2.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "react-dom": "^16.10.2",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^16.10.2"

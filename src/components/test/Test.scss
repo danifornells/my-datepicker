@@ -1,0 +1,10 @@
+
+/* Vars */
+$font-size-s: 12px !default;
+
+/* Styles */
+.Test {
+  font-size: $font-size-s;
+  color: red;
+  user-select: none;
+}
