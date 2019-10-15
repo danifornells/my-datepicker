@@ -1,0 +1,27 @@
+{
+  "asset": {
+    "font": {
+      "opensansRegular": {
+        "name"     : { "value": "Open Sans" },
+        "woff"     : { "value": "opensans/opensans-regular-webfont.woff" },
+        "woff2"    : { "value": "opensans/opensans-regular-webfont.woff2" },
+        "weight"   : { "value": 400 },
+        "fallback" : { "value": "Verdana, Geneva, sans-serif" }
+      },
+      "opensansSemiBold": {
+        "name"     : { "value": "Open Sans" },
+        "woff"     : { "value": "opensans/opensans-semi-bold-webfont.woff" },
+        "woff2"    : { "value": "opensans/opensans-semi-bold-webfont.woff2" },
+        "weight"   : { "value": 600 },
+        "fallback" : { "value": "Verdana, Geneva, sans-serif" }
+      },
+      "opensansBold": {
+        "name"     : { "value": "Open Sans" },
+        "woff"     : { "value": "opensans/opensans-bold-webfont.woff" },
+        "woff2"    : { "value": "opensans/opensans-bold-webfont.woff2" },
+        "weight"   : { "value": 700 },
+        "fallback" : { "value": "Verdana, Geneva, sans-serif" }
+      }
+   }
+  }
+}
