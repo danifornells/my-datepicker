@@ -1,0 +1,24 @@
+{
+  "color": {
+    "foundation": {
+      "brand": {
+        "primary": {
+          "base"       : {"value": "#00b49d"},
+          "ultraLight" : {"value": "#e7f8f6"},
+          "light"      : {"value": "#b5e9e2"},
+          "semiLight"  : {"value": "#6dd2c5"},
+          "semiDark"   : {"value": "#16a085"},
+          "dark"       : {"value": "#1a7767"}
+        },
+        "secondary": {
+          "base"       : {"value": "#f6921e"},
+          "ultraLight" : {"value": "#fff5ec"},
+          "light"      : {"value": "#fedfc1"},
+          "semiLight"  : {"value": "#fcbf82"},
+          "semiDark"   : {"value": "#e67e22"},
+          "dark"       : {"value": "#d35400"}
+        }
+      }
+    }
+  }
+}

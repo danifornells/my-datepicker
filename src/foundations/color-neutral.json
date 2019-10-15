@@ -1,0 +1,25 @@
+{
+  "color": {
+    "foundation": {
+      "neutral": {
+        "white": {
+          "base"       : {"value": "#fff"},
+          "transparent": {"value": "#ffffff00"}
+        },
+        "black": {
+          "base"       : {"value": "#000"},
+          "transparent": {"value": "#00000000"}
+        },
+        "grey": {
+          "ultraLight" : {"value": "#fafafa"},
+          "light"      : {"value": "#efefef"},
+          "semiLight"  : {"value": "#dedede"},
+          "base"       : {"value": "#c6c6c6"},
+          "semiDark"   : {"value": "#6e6e6f"},
+          "dark"       : {"value": "#2a2628"},
+          "ultraDark"  : {"value": "#000000"}
+        }
+      }
+    }
+  }
+}

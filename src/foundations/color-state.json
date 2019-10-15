@@ -1,0 +1,40 @@
+{
+  "color": {
+    "foundation": {
+      "state": {
+        "success": {
+          "base"       : {"value": "#24bb3d"},
+          "ultraLight" : {"value": "#f4fbf5"},
+          "light"      : {"value": "#bdeac4"},
+          "semiLight"  : {"value": "#65cf77"},
+          "semiDark"   : {"value": "#1c9530"},
+          "dark"       : {"value": "#157024"}
+        },
+        "info": {
+          "base"       : {"value": "#20a0de"},
+          "ultraLight" : {"value": "#ebf6fb"},
+          "light"      : {"value": "#a7def9"},
+          "semiLight"  : {"value": "#87c9ec"},
+          "semiDark"   : {"value": "#006996"},
+          "dark"       : {"value": "#004563"}
+        },
+        "warning": {
+          "base"       : {"value": "#f5a623"},
+          "ultraLight" : {"value": "#fef6e9"},
+          "light"      : {"value": "#fce4bd"},
+          "semiLight"  : {"value": "#f8c065"},
+          "semiDark"   : {"value": "#e08c02"},
+          "dark"       : {"value": "#ca7d00"}
+        },
+        "danger": {
+          "base"       : {"value": "#ff0000"},
+          "ultraLight" : {"value": "#fff2f2"},
+          "light"      : {"value": "#ffb2b2"},
+          "semiLight"  : {"value": "#ff4c4c"},
+          "semiDark"   : {"value": "#e21814"},
+          "dark"       : {"value": "#c50202"}
+        }
+      }
+    }
+  }
+}

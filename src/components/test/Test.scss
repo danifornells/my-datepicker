@@ -1,10 +1,10 @@
 
 /* Vars */
-$font-size-s: 12px !default;
+@import "../../../build/foundations/bourgeois/variables";
 
 /* Styles */
 .Test {
-  font-size: $font-size-s;
-  color: red;
+  font-size: $size-font-foundation-xl;
+  color: $color-foundation-brand-primary-base;
   user-select: none;
 }

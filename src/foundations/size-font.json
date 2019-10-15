@@ -1,0 +1,19 @@
+{
+  "size": {
+    "font": {
+      "foundation": {
+        "xs"   : {"value": "0.625"},
+        "s"    : {"value": "0.75"},
+        "m"    : {"value": "0.875"},
+        "l"    : {"value": "1"},
+        "xl"   : {"value": "1.5"},
+        "xxl"  : {"value": "2"},
+        "xxxl" : {"value": "3"},
+        "base"  : {
+          "value": "{size.font.foundation.l.value}",
+          "comment": "The base font size"
+        }
+      }
+    }
+  }
+}
