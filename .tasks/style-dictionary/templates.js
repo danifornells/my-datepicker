@@ -1,10 +1,4 @@
-// Create a new heading to be used on every template
-const currentDate = new Date();
-const templateHeading = `
-Do not edit directly
-Generated on ${currentDate.toGMTString()}
-`;
-
+const templateHeading = require('./../helpers/template-heading');
 
 // Template to get a font ready to be used into SCSS
 const scssFontTemplate = (dictionary, platform) => {
