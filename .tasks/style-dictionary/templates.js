@@ -21,8 +21,7 @@ $${fontProps.fallback.name}: ${fontProps.fallback.value} !default;
   font-style: normal;
   font-weight: ${fontProps.weight.value};
   font-display: fallback;
-  src: local('${fontProps.name.value}'),
-  url('#{$config-path-fonts}${fontProps.woff2.value}') format('woff2'), /* Super Modern Browsers */
+  src: url('#{$config-path-fonts}${fontProps.woff2.value}') format('woff2'), /* Super Modern Browsers */
   url('#{$config-path-fonts}${fontProps.woff.value}') format('woff'); /* Modern Browsers */
 } 
 `).join('')}

@@ -1,0 +1,65 @@
+{
+  "size": {
+    "font": {
+      "calendar": {
+        "heading": {
+          "value": "{size.font.foundation.l.value}"
+        },
+        "weekDay": {
+          "value": "{size.font.foundation.s.value}"
+        },
+        "date": {
+          "value": "{size.font.foundation.m.value}"
+        }
+      }
+    },
+    "spacing": {
+      "calendar": {
+        "dateCell": {
+          "value": "3"
+        }
+      }
+    }
+  },
+  "color": {
+    "background": {
+      "calendar": {
+        "date": {
+          "hover": {
+            "value": "{color.foundation.state.info.ultraLight.value}"
+          },
+          "selected": {
+            "value": "{color.foundation.state.info.semiDark.value}"
+          }
+        }
+      }
+    },
+    "text": {
+      "calendar": {
+        "navButton": {
+          "base": {
+            "value": "{color.foundation.state.info.semiDark.value}"
+          },
+          "hover": {
+            "value": "{color.foundation.state.info.dark.value}"
+          }
+        },
+        "date": {
+          "selected": {
+            "value": "#ffffff"
+          }
+        }
+      }
+    }
+  },
+  "shape": {
+    "calendar": {
+      "date": {
+        "base": {
+          "value": "circle",
+          "comment": "One of [\"circle\", \"square\"]"
+        }
+      }
+    }
+  }
+}

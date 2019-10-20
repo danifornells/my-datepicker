@@ -1,0 +1,93 @@
+
+/* Vars */
+@import "../../../build/tokens/bourgeois/variables";
+
+/* Mixins */
+@import "../../styles/mixins";
+
+/* Styles */
+.Calendar {
+  display: inline-block;
+  width: calc(#{$size-spacing-calendar-date-cell} * 7);
+  height: calc(#{$size-spacing-calendar-date-cell} * 8);
+  user-select: none;
+
+  &-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $size-spacing-calendar-date-cell;
+  }
+
+  &-navButton {
+    @include clear-button-styles;
+    line-height: 0;
+    height: $size-spacing-calendar-date-cell;
+    width: $size-spacing-calendar-date-cell;
+    fill: $color-text-calendar-nav-button-base;
+    &:hover {
+      fill: $color-text-calendar-nav-button-hover;
+    }
+    &[disabled] {
+      opacity: .25;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+
+  &-currentMonth {
+    font-size: $size-font-calendar-heading;
+    font-weight: 600;
+  }
+
+  &-page {
+    display: grid;
+    grid-template-columns: repeat(7, #{$size-spacing-calendar-date-cell});
+  }
+
+  &-weekDay {
+    display: inline-block;
+    text-align: center;
+    line-height: $size-spacing-calendar-date-cell;
+    font-size: $size-font-calendar-week-day;
+    &.is-weekend {
+      font-weight: 600;
+    }
+  }
+
+  &-date {
+    @include clear-button-styles;
+    line-height: $size-spacing-calendar-date-cell;
+    transition-property: background-color;
+    transition-duration: .25s;
+    font-size: $size-font-calendar-date;
+
+    // Apply $shape-calendar-date-base or warns if contains an invalid value
+    @if $shape-calendar-date-base == "circle" {
+      border-radius: 50%;
+    } @else if $shape-calendar-date-base != "square" {
+      @warn "$shape-calendar-date-base: `#{$shape-calendar-date-base}` is not one of ['circle', 'square']";
+    }
+
+    &:hover {
+      transition-duration: .1s;
+      background-color: $color-background-calendar-date-hover;
+    }
+
+    &.is-selected {
+      transition-duration: 0s;
+      font-weight: 600;
+      background-color: $color-background-calendar-date-selected;
+      color: $color-text-calendar-date-selected;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    &.is-from-another-month,
+    &[disabled] {
+      opacity: .25;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}

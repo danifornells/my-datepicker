@@ -14,6 +14,7 @@ ${templateHeading}
 
 import React from 'react';
 import IconPropTypes, { ICON_SIZES } from './Icon.prop-types';
+import '../../styles/base.scss';
 import STYLES from './Icon.scss';
 
 const c = (className) => STYLES[className] || 'UNKNOWN';

@@ -2,12 +2,14 @@ module.exports = (brand) => ({
   source: [
     'src/foundations/**/!(*.*).json',
     `src/foundations/**/*.${brand}.json`,
+    'src/components/**/!(*.tokens.*).json',
+    `src/components/**/*.tokens.${brand}.json`,
     'src/assets/**/*.json',
   ],
   platforms: {
     scss: {
       transformGroup: 'scss',
-      buildPath: `build/foundations/${brand}/`,
+      buildPath: `build/tokens/${brand}/`,
       files: [
         {
           destination: '_variables.scss',
@@ -23,7 +25,7 @@ module.exports = (brand) => ({
     },
     android: {
       transformGroup: 'android',
-      buildPath: `build/foundations/${brand}/android/`,
+      buildPath: `build/tokens/${brand}/android/`,
       files: [
         {
           destination: 'font_dimens.xml',
@@ -37,7 +39,7 @@ module.exports = (brand) => ({
     },
     ios: {
       transformGroup: 'ios',
-      buildPath: `build/foundations/${brand}/ios/`,
+      buildPath: `build/tokens/${brand}/ios/`,
       files: [
         {
           destination: 'StyleDictionaryColor.h',
@@ -87,7 +89,7 @@ module.exports = (brand) => ({
     },
     'ios-swift': {
       transformGroup: 'ios-swift',
-      buildPath: `build/foundations/${brand}/ios-swift/`,
+      buildPath: `build/tokens/${brand}/ios-swift/`,
       files: [
         {
           destination: 'StyleDictionary.swift',
@@ -100,7 +102,7 @@ module.exports = (brand) => ({
     },
     'ios-swift-separate-enums': {
       transformGroup: 'ios-swift-separate',
-      buildPath: `build/foundations/${brand}/ios-swift/`,
+      buildPath: `build/tokens/${brand}/ios-swift/`,
       files: [
         {
           destination: 'StyleDictionaryColor.swift',

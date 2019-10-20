@@ -3,22 +3,26 @@
   "version": "1.0.0",
   "description": "A datepicker could fit into a multi-brand design system ",
   "scripts": {
-    "build": "npm run build:foundations && npm run build:icons && npm run build:sb",
-    "build:foundations": "rimraf build/foundations && node .tasks/build-foundations.js",
+    "build": "npm run build:tokens && npm run build:icons && npm run build:sb",
+    "build:tokens": "rimraf build/tokens && node .tasks/build-tokens.js",
     "build:icons": "node .tasks/build-icons.js",
     "build:sb": "rimraf build/storybook && build-storybook -c .storybook -o build/storybook",
     "deploy": "now build/storybook --name=my-datepicker",
     "lint": "eslint src/**/*.js src/**/*.jsx && eslint .tasks/**/*.js --no-ignore",
-    "start": "start-storybook"
+    "lint:fix": "eslint src/**/*.js src/**/*.jsx --fix && eslint .tasks/**/*.js --no-ignore --fix",
+    "start": "start-storybook",
+    "test": "jest"
   },
   "author": "Daniel Fornells",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.4",
+    "@storybook/addon-actions": "^5.2.5",
     "@storybook/addon-info": "^5.2.4",
     "@storybook/addon-knobs": "^5.2.4",
     "@storybook/react": "^5.2.3",
     "autoprefixer": "^9.6.4",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "classnames": "^2.2.6",
     "css-loader": "^3.2.0",
@@ -32,6 +36,7 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "glob": "^7.1.4",
+    "jest": "^24.9.0",
     "jsdom": "^15.2.0",
     "node-sass": "^4.12.0",
     "postcss-loader": "^3.0.0",
@@ -44,5 +49,9 @@
   "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.10.2"
+  },
+  "jest": {
+    "testRegex": ".*.unit\\.js$"
   }
 }
+

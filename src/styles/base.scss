@@ -1,0 +1,12 @@
+// Init config
+$config-path-fonts: '../../src/assets/fonts/' !default;
+
+// Import reset and vars
+@import "reset";
+@import "../../build/tokens/bourgeois/variables";
+@import "../../build/tokens/bourgeois/fonts";
+
+// Add base styles
+body {
+  font-family: $asset-font-opensans-regular-name;
+}

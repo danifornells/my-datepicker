@@ -17,18 +17,39 @@ const Icon = ({ icon, ...props }) => {
 
 
 /**
+ * An example of single icon
+ */
+storiesOf('Components|Icon', module)
+  .addDecorator(withKnobs)
+  .add(
+    'Docs',
+    () => {
+      const size = select('size', [...Object.keys(ICON_SIZES)], 'medium');
+      const className = text('className', '');
+      return <IconLink size={size} className={className} />;
+    },
+    {
+      info: {
+        header: true,
+        inline: true,
+        text: 'Icons are used to better illustrate actions.',
+      },
+    },
+  );
+
+/**
  * An overview of available icons
  */
 storiesOf('Components|Icon', module)
   .add(
-    'Overview',
+    'Available icons',
     () => {
       const size = 'large';
       const className = 'Storybook-Icon';
       const { iconsList, ...iconsToShow } = IconComponents;
       const iconsShown = Object.keys(iconsToShow)
         .map((icon) => (
-          <div className="Storybook-IconBox">
+          <div className="Storybook-IconBox" key={icon}>
             <Icon icon={icon} size={size} className={className} />
             <span className="Storybook-IconName">{icon}</span>
           </div>
@@ -44,28 +65,6 @@ storiesOf('Components|Icon', module)
         inline: true,
         source: false,
         propTables: false,
-      },
-    },
-  );
-
-
-/**
- * An example of single icon
- */
-storiesOf('Components|Icon', module)
-  .addDecorator(withKnobs)
-  .add(
-    'Example',
-    () => {
-      const size = select('size', [...Object.keys(ICON_SIZES)], 'medium');
-      const className = text('className', '');
-      return <IconLink size={size} className={className} />;
-    },
-    {
-      info: {
-        header: true,
-        inline: true,
-        text: 'Icons are used to better illustrate actions.',
       },
     },
   );
