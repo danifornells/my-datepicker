@@ -8,6 +8,7 @@
     "build:icons": "node .tasks/build-icons.js",
     "build:sb": "rimraf build/storybook && build-storybook -c .storybook -o build/storybook",
     "deploy": "now build/storybook --name=my-datepicker",
+    "lint": "eslint src/**/*.js src/**/*.jsx && eslint .tasks/**/*.js --no-ignore",
     "start": "start-storybook"
   },
   "author": "Daniel Fornells",
@@ -23,11 +24,17 @@
     "css-loader": "^3.2.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "glob": "^7.1.4",
     "jsdom": "^15.2.0",
     "node-sass": "^4.12.0",
     "postcss-loader": "^3.0.0",
-    "prop-types": "^15.7.2",
     "react-dom": "^16.10.2",
     "rimraf": "^3.0.0",
     "sass-loader": "^8.0.0",
@@ -35,6 +42,7 @@
     "style-loader": "^1.0.0"
   },
   "peerDependencies": {
+    "prop-types": "^15.7.2",
     "react": "^16.10.2"
   }
 }

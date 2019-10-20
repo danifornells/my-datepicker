@@ -1,9 +1,10 @@
+/* eslint-disable import/no-extraneous-dependencies, no-console, global-require */
 const StyleDictionary = require('style-dictionary');
 const customFilters = require('./style-dictionary/filters');
 const customTemplates = require('./style-dictionary/templates');
 const brandList = require('./../.brandlist.json') || [];
 
-brandList.map(brand => {
+brandList.forEach((brand) => {
   console.log(`\nBuilding ${brand} design tokens ...`);
 
   // Create a builder with brand configuration
@@ -12,14 +13,14 @@ brandList.map(brand => {
 
   // Register custom filters
   Object.entries(customFilters).forEach(([name, matcher]) => {
-    StyleDictionaryBuilder.registerFilter({name, matcher})
+    StyleDictionaryBuilder.registerFilter({ name, matcher });
   });
 
   // Register custom templates
   Object.entries(customTemplates).forEach(([name, formatter]) => {
-    StyleDictionaryBuilder.registerFormat({name, formatter})
+    StyleDictionaryBuilder.registerFormat({ name, formatter });
   });
 
   // Build current brand Design Tokens
   StyleDictionaryBuilder.buildAllPlatforms();
-})
+});

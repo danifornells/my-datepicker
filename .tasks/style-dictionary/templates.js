@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const templateHeading = require('./../helpers/template-heading');
 
 // Template to get a font ready to be used into SCSS
@@ -25,8 +26,9 @@ $${fontProps.fallback.name}: ${fontProps.fallback.value} !default;
   url('#{$config-path-fonts}${fontProps.woff.value}') format('woff'); /* Modern Browsers */
 } 
 `).join('')}
-`}
+`;
+};
 
 module.exports = {
-  "scss/font": scssFontTemplate
-}
+  'scss/font': scssFontTemplate,
+};

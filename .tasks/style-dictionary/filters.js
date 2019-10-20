@@ -1,7 +1,7 @@
 
-const isFont = (prop) => prop.attributes.category === 'asset' && prop.attributes.type === 'font'
+const isFont = (prop) => prop.attributes.category === 'asset' && prop.attributes.type === 'font';
 
 module.exports = {
-  isFont: isFont,
+  isFont,
   isNotFont: (prop) => !isFont(prop),
-}
+};
