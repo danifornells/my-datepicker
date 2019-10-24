@@ -1,11 +1,11 @@
 
-/* Vars */
-@import "../../../build/tokens/bourgeois/variables";
+/* Calendar Tokens */
+@import "../../../build/tokens/bourgeois/tokens.calendar";
 
-/* Mixins */
+/* Shared Mixins */
 @import "../../styles/mixins";
 
-/* Styles */
+/* Calendar Styles */
 .Calendar {
   display: inline-block;
   width: calc(#{$size-spacing-calendar-date-cell} * 7);

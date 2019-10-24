@@ -1,17 +1,16 @@
 const path = require('path');
 
 // Extend Storybook webpack configuration
-module.exports = async ({ config, mode }) => {
-
+module.exports = async ({ config }) => {
   // Configure css-loader to disable CSS modules transformations
   const customCssLoader = {
     loader: 'css-loader',
     options: {
       modules: {
         mode: 'local',
-        localIdentName: '[local]'
-      }
-    }
+        localIdentName: '[local]',
+      },
+    },
   };
 
   // Enable styles processing (mainly SASS, POSTCSS)

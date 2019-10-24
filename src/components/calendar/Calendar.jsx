@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import CalendarDate from './CalendarDate';
 import IconChevronLeft from '../icons/IconChevronLeft';
 import IconChevronRight from '../icons/IconChevronRight';
-import CalendarPropTypes from './Calendar.prop-types';
 import * as calendarLocales from './Calendar.locales';
 import {
   areDatesInSameDay,
@@ -20,8 +20,12 @@ import {
 import '../../styles/base.scss';
 import STYLES from './Calendar.scss';
 
+const { string, oneOf, func } = PropTypes;
 const c = (className) => STYLES[className] || 'UNKNOWN';
 
+/**
+ * [𝗖] Calendar component
+ */
 class Calendar extends Component {
   constructor(props) {
     super(props);
@@ -38,18 +42,21 @@ class Calendar extends Component {
     };
   }
 
+  /** [𝗔] When user clicked a new Date */
   handleDayClick(newDate) {
     const { onDateChange } = this.props;
     this.setState({ currentValue: newDate });
     onDateChange(dateToDateString(newDate));
   }
 
+  /** [𝗔] Offsets the calendar by given amount of months */
   offsetByMonth(months) {
     const { currentMonth } = this.state;
     const newCurrentMonth = offsetBy(currentMonth, { months });
     this.setState({ currentMonth: newCurrentMonth });
   }
 
+  /** [𝗥] Months navigation and title (month/year)  */
   renderHeading() {
     const { currentMonth } = this.state;
     const prevMonthDisabled = (
@@ -87,6 +94,7 @@ class Calendar extends Component {
     );
   }
 
+  /** [𝗥] WeekDays names row  */
   renderWeekDays(calendarDates) {
     const { weekdaysShort } = this.locales;
     return Array(7).fill(null).map((d, i) => {
@@ -106,6 +114,7 @@ class Calendar extends Component {
     });
   }
 
+  /** [𝗥] Date numbers grid  */
   renderDates(calendarDates) {
     const { currentMonth, currentValue } = this.state;
     return calendarDates.map((date) => {
@@ -137,6 +146,7 @@ class Calendar extends Component {
     });
   }
 
+  /** [𝗥] Full calendar  */
   render() {
     const { className } = this.props;
     const { currentMonth } = this.state;
@@ -155,11 +165,45 @@ class Calendar extends Component {
   }
 }
 
-Calendar.propTypes = CalendarPropTypes;
+/**
+ * [𝗣𝗩] Custom PropType validation for DateString
+ * - Passes if it's falsely value
+ * - Passes if it's a valid DateString
+ */
+const OPTIONAL_DATESTRING = (props, propName, componentName) => {
+  const date = props[propName];
+  if (date === '' || date === null || typeof date === 'undefined') return null;
+  return (typeof date !== 'string' || !isValidDateString(date))
+    ? new Error(
+      `Given '${date}' seems to be an invalid prop ${propName} supplied to ${componentName}. `,
+      'A valid dateString (YYYY-MM-DD) is expected.',
+    )
+    : null;
+};
+
+
+Calendar.propTypes = {
+  /** Min date as DateString */
+  min: OPTIONAL_DATESTRING,
+  /** Max date as DateString */
+  max: OPTIONAL_DATESTRING,
+  /** Current date as DateString */
+  value: OPTIONAL_DATESTRING,
+  /** ClassName/s to be appended */
+  className: string,
+  /** Language will set locale settings */
+  language: oneOf(Object.keys(calendarLocales)),
+  /** Invoked when a new date is selected */
+  onDateChange: func,
+};
 
 Calendar.defaultProps = {
+  min: '',
+  max: '',
+  value: '',
   language: 'en',
-  className: '',
+  className: 'en',
+  onDateChange: () => {},
 };
 
 export default Calendar;

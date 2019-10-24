@@ -3,9 +3,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 import * as IconComponents from './index';
-import { ICON_SIZES } from './Icon.prop-types';
+import { ICON_SIZES } from './consts';
 import IconLink from './IconLink';
-import STYLES from './Icon.stories.scss'; // eslint-disable-line no-unused-vars
+import './Icon.stories.scss';
 
 /**
  * Generic icon component to illustrate the overview of available icons

@@ -1,3 +1,6 @@
+const keywords = require('./keywords').KEYWORDS;
+const keywordOutput = require('./keywords').OUTPUT;
+
 module.exports = (brand) => ({
   source: [
     'src/foundations/**/!(*.*).json',
@@ -7,17 +10,45 @@ module.exports = (brand) => ({
     'src/assets/**/*.json',
   ],
   platforms: {
+    json: {
+      transformGroup: 'js',
+      buildPath: `build/tokens/${brand}/`,
+      files: [
+        ...keywordOutput(keywords, 'json', 'json'),
+        {
+          format: 'json',
+          destination: 'tokens.json',
+        },
+        ...keywordOutput(keywords, 'json/nested', 'nested.json'),
+        {
+          format: 'json/nested',
+          destination: 'tokens.nested.json',
+        },
+      ],
+    },
+    js: {
+      transformGroup: 'js',
+      buildPath: `build/tokens/${brand}/`,
+      files: [
+        ...keywordOutput(keywords, 'javascript/es6', 'js'),
+        {
+          format: 'javascript/es6',
+          destination: 'tokens.js',
+        },
+      ],
+    },
     scss: {
       transformGroup: 'scss',
       buildPath: `build/tokens/${brand}/`,
       files: [
+        ...keywordOutput(keywords, 'scss/map-deep', 'scss', true),
         {
-          destination: '_variables.scss',
+          destination: 'tokens.scss',
           format: 'scss/map-deep',
           filter: 'isNotFont',
         },
         {
-          destination: '_fonts.scss',
+          destination: 'fonts.scss',
           format: 'scss/font',
           filter: 'isFont',
         },
@@ -122,6 +153,21 @@ module.exports = (brand) => ({
           filter: {
             attributes: {
               category: 'size',
+            },
+          },
+        },
+      ],
+    },
+    sketch: {
+      transforms: ['name/cti/camel', 'attribute/cti', 'color/sketch'],
+      buildPath: `build/tokens/${brand}/sketch/`,
+      files: [
+        {
+          destination: 'colors.sketchpalette',
+          format: 'sketch/palette/v2',
+          filter: {
+            attributes: {
+              category: 'color',
             },
           },
         },

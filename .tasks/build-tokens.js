@@ -1,8 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies, no-console, global-require */
 const StyleDictionary = require('style-dictionary');
-const customFilters = require('./style-dictionary/filters');
 const customTemplates = require('./style-dictionary/templates');
+const customFilters = require('./style-dictionary/filters');
 const brandList = require('./../.brandlist.json') || [];
+const keywords = require('./style-dictionary/keywords').KEYWORDS;
+const keywordFilters = require('./style-dictionary/keywords').FILTERS(keywords);
 
 brandList.forEach((brand) => {
   console.log(`\nBuilding ${brand} design tokens ...`);
@@ -11,8 +13,11 @@ brandList.forEach((brand) => {
   const brandConfig = require('./style-dictionary/config')(brand);
   const StyleDictionaryBuilder = StyleDictionary.extend(brandConfig);
 
-  // Register custom filters
+  // Register custom and keyword filters
   Object.entries(customFilters).forEach(([name, matcher]) => {
+    StyleDictionaryBuilder.registerFilter({ name, matcher });
+  });
+  Object.entries(keywordFilters).forEach(([name, matcher]) => {
     StyleDictionaryBuilder.registerFilter({ name, matcher });
   });
 

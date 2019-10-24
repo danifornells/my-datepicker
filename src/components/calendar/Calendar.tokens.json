@@ -46,7 +46,7 @@
         },
         "date": {
           "selected": {
-            "value": "#ffffff"
+            "value": "{color.foundation.neutral.white.base.value}"
           }
         }
       }

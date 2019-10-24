@@ -13,10 +13,12 @@ ${templateHeading}
 */
 
 import React from 'react';
-import IconPropTypes, { ICON_SIZES } from './Icon.prop-types';
+import PropTypes from 'prop-types';
+import { ICON_SIZES } from './consts';
 import '../../styles/base.scss';
 import STYLES from './Icon.scss';
 
+const { oneOf, string } = PropTypes;
 const c = (className) => STYLES[className] || 'UNKNOWN';
 
 const ${icon.componentName} = ({
@@ -37,7 +39,12 @@ const ${icon.componentName} = ({
   /* eslint-enable */
 };
 
-${icon.componentName}.propTypes = IconPropTypes;
+${icon.componentName}.propTypes = {
+  /** Icon size */
+  size: oneOf(Object.keys(ICON_SIZES)),
+  /** ClassName/s to be appended */
+  className: string,
+};
 
 ${icon.componentName}.defaultProps = {
   size: 'medium',

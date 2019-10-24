@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import STYLES from './Calendar.scss';
-import CalendarDatePropTypes from './CalendarDate.prop-types';
 
+const { bool, func, number } = PropTypes;
 const c = (className) => STYLES[className] || 'UNKNOWN';
 
 const CalendarDate = ({
@@ -24,12 +25,19 @@ const CalendarDate = ({
   );
 };
 
-CalendarDate.propTypes = CalendarDatePropTypes;
+CalendarDate.propTypes = {
+  dateNumber: number.isRequired,
+  isFromAnotherMonth: bool,
+  isSelected: bool,
+  isDisabled: bool,
+  onClick: func,
+};
 
 CalendarDate.defaultProps = {
   isFromAnotherMonth: false,
   isSelected: false,
   isDisabled: false,
+  onClick: () => {},
 };
 
 export default CalendarDate;

@@ -3,7 +3,7 @@ $config-path-fonts: '../../src/assets/fonts/' !default;
 
 // Import reset and vars
 @import "reset";
-@import "../../build/tokens/bourgeois/variables";
+@import "../../build/tokens/bourgeois/tokens.foundation";
 @import "../../build/tokens/bourgeois/fonts";
 
 // Add base styles

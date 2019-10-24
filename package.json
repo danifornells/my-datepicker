@@ -8,8 +8,8 @@
     "build:icons": "node .tasks/build-icons.js",
     "build:sb": "rimraf build/storybook && build-storybook -c .storybook -o build/storybook",
     "deploy": "now build/storybook --name=my-datepicker",
-    "lint": "eslint src/**/*.js src/**/*.jsx && eslint .tasks/**/*.js --no-ignore",
-    "lint:fix": "eslint src/**/*.js src/**/*.jsx --fix && eslint .tasks/**/*.js --no-ignore --fix",
+    "lint": "eslint src/**/*.js src/**/*.jsx && eslint .tasks/**/*.js --no-ignore && eslint .storybook/**/*.js .storybook/**/*.js --no-ignore",
+    "lint:fix": "eslint src/**/*.js src/**/*.jsx --fix && eslint .tasks/**/*.js --no-ignore --fix && eslint .storybook/**/*.js .storybook/**/*.js --no-ignore --fix",
     "start": "start-storybook",
     "test": "jest"
   },
@@ -18,9 +18,9 @@
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@storybook/addon-actions": "^5.2.5",
-    "@storybook/addon-info": "^5.2.4",
-    "@storybook/addon-knobs": "^5.2.4",
-    "@storybook/react": "^5.2.3",
+    "@storybook/addon-info": "^5.2.5",
+    "@storybook/addon-knobs": "^5.2.5",
+    "@storybook/react": "^5.2.5",
     "autoprefixer": "^9.6.4",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
@@ -54,4 +54,3 @@
     "testRegex": ".*.unit\\.js$"
   }
 }
-
