@@ -2,22 +2,23 @@
 /* Clean default button styles */
 
 @mixin clear-button-styles() {
-    background: none;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  user-select: none;
+
+  &::-moz-focus-inner {
     border: 0;
-    color: inherit;
-    font: inherit;
-    line-height: normal;
-    overflow: visible;
     padding: 0;
-    user-select: none;
-    cursor: pointer;
+  }
 
-    &::-moz-focus-inner {
-        border: 0;
-        padding: 0;
-    }
-
-    &:focus {
-        outline: 0;
-    }
+  &:focus {
+    outline: 0;
+  }
 }

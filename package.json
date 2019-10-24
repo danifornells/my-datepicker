@@ -8,8 +8,9 @@
     "build:icons": "node .tasks/build-icons.js",
     "build:sb": "rimraf build/storybook && build-storybook -c .storybook -o build/storybook",
     "deploy": "now build/storybook --name=my-datepicker",
-    "lint": "eslint src/**/*.js src/**/*.jsx && eslint .tasks/**/*.js --no-ignore && eslint .storybook/**/*.js .storybook/**/*.js --no-ignore",
-    "lint:fix": "eslint src/**/*.js src/**/*.jsx --fix && eslint .tasks/**/*.js --no-ignore --fix && eslint .storybook/**/*.js .storybook/**/*.js --no-ignore --fix",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint src/**/*.js src/**/*.jsx --fix && eslint .tasks/**/*.js --no-ignore --fix && eslint .storybook/**/*.js .storybook/**/*.js --no-ignore --fix",
+    "lint:css": "stylelint 'src/**/*.scss' --fix",
     "start": "start-storybook",
     "test": "jest"
   },
@@ -44,7 +45,9 @@
     "rimraf": "^3.0.0",
     "sass-loader": "^8.0.0",
     "style-dictionary": "^2.8.2",
-    "style-loader": "^1.0.0"
+    "style-loader": "^1.0.0",
+    "stylelint": "^11.1.1",
+    "stylelint-config-recommended": "^3.0.0"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
