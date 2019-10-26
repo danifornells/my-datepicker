@@ -1,0 +1,12 @@
+{
+  "bourgeois": {
+    "BRAND": "bourgeois",
+    "PATH_TOKENS": "build/tokens/bourgeois",
+    "PATH_SB": "build/storybook/bourgeois"
+  },
+  "circuitous": {
+    "BRAND": "circuitous",
+    "PATH_TOKENS": "build/tokens/circuitous",
+    "PATH_SB": "build/storybook/circuitous"
+  }
+}

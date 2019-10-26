@@ -1,6 +1,8 @@
 const keywords = require('./keywords').KEYWORDS;
 const keywordOutput = require('./keywords').OUTPUT;
 
+const buildPath = process.env.PATH_TOKENS;
+
 module.exports = (brand) => ({
   source: [
     'src/foundations/**/!(*.*).json',
@@ -12,7 +14,7 @@ module.exports = (brand) => ({
   platforms: {
     json: {
       transformGroup: 'js',
-      buildPath: `build/tokens/${brand}/`,
+      buildPath: `${buildPath}/`,
       files: [
         ...keywordOutput(keywords, 'json', 'json'),
         {
@@ -28,7 +30,7 @@ module.exports = (brand) => ({
     },
     js: {
       transformGroup: 'js',
-      buildPath: `build/tokens/${brand}/`,
+      buildPath: `${buildPath}/`,
       files: [
         ...keywordOutput(keywords, 'javascript/es6', 'js'),
         {
@@ -39,7 +41,7 @@ module.exports = (brand) => ({
     },
     scss: {
       transformGroup: 'scss',
-      buildPath: `build/tokens/${brand}/`,
+      buildPath: `${buildPath}/`,
       files: [
         ...keywordOutput(keywords, 'scss/map-deep', 'scss', true),
         {
@@ -56,7 +58,7 @@ module.exports = (brand) => ({
     },
     android: {
       transformGroup: 'android',
-      buildPath: `build/tokens/${brand}/android/`,
+      buildPath: `${buildPath}/android/`,
       files: [
         {
           destination: 'font_dimens.xml',
@@ -70,7 +72,7 @@ module.exports = (brand) => ({
     },
     ios: {
       transformGroup: 'ios',
-      buildPath: `build/tokens/${brand}/ios/`,
+      buildPath: `${buildPath}/ios/`,
       files: [
         {
           destination: 'StyleDictionaryColor.h',
@@ -120,7 +122,7 @@ module.exports = (brand) => ({
     },
     'ios-swift': {
       transformGroup: 'ios-swift',
-      buildPath: `build/tokens/${brand}/ios-swift/`,
+      buildPath: `${buildPath}/ios-swift/`,
       files: [
         {
           destination: 'StyleDictionary.swift',
@@ -133,7 +135,7 @@ module.exports = (brand) => ({
     },
     'ios-swift-separate-enums': {
       transformGroup: 'ios-swift-separate',
-      buildPath: `build/tokens/${brand}/ios-swift/`,
+      buildPath: `${buildPath}/ios-swift/`,
       files: [
         {
           destination: 'StyleDictionaryColor.swift',
@@ -160,7 +162,7 @@ module.exports = (brand) => ({
     },
     sketch: {
       transforms: ['name/cti/camel', 'attribute/cti', 'color/sketch'],
-      buildPath: `build/tokens/${brand}/sketch/`,
+      buildPath: `${buildPath}/sketch/`,
       files: [
         {
           destination: 'colors.sketchpalette',

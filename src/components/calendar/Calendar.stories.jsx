@@ -9,7 +9,9 @@ import tokensProcessor from '../../../.storybook/tokens-processor';
 import Calendar from './Calendar';
 import * as calendarLocales from './Calendar.locales';
 
-const componentTokens = require('../../../build/tokens/bourgeois/tokens.calendar.json');
+/* eslint-disable import/no-dynamic-require, no-undef */
+const componentTokens = require(`../../../build/tokens/${WEBPACK_BRAND}/tokens.calendar.json`);
+/* eslint-enable import/no-dynamic-require, no-undef */
 
 const listableTokens = tokensProcessor(componentTokens);
 

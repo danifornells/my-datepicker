@@ -202,7 +202,7 @@ Calendar.defaultProps = {
   max: '',
   value: '',
   language: 'en',
-  className: 'en',
+  className: '',
   onDateChange: () => {},
 };
 

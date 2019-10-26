@@ -1,0 +1,65 @@
+{
+  "size": {
+    "font": {
+      "calendar": {
+        "heading": {
+          "value": "{size.font.foundation.xl.value}"
+        },
+        "weekDay": {
+          "value": "{size.font.foundation.s.value}"
+        },
+        "date": {
+          "value": "{size.font.foundation.l.value}"
+        }
+      }
+    },
+    "spacing": {
+      "calendar": {
+        "dateCell": {
+          "value": "3"
+        }
+      }
+    }
+  },
+  "color": {
+    "background": {
+      "calendar": {
+        "date": {
+          "hover": {
+            "value": "{color.foundation.neutral.grey.light.value}"
+          },
+          "selected": {
+            "value": "{color.foundation.brand.primary.semiDark.value}"
+          }
+        }
+      }
+    },
+    "text": {
+      "calendar": {
+        "navButton": {
+          "base": {
+            "value": "{color.foundation.brand.primary.semiDark.value}"
+          },
+          "hover": {
+            "value": "{color.foundation.brand.primary.dark.value}"
+          }
+        },
+        "date": {
+          "selected": {
+            "value": "{color.foundation.neutral.white.base.value}"
+          }
+        }
+      }
+    }
+  },
+  "shape": {
+    "calendar": {
+      "date": {
+        "base": {
+          "value": "square",
+          "comment": "One of [\"circle\", \"square\"]"
+        }
+      }
+    }
+  }
+}

@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "description": "A datepicker could fit into a multi-brand design system ",
   "scripts": {
-    "build": "npm run build:tokens && npm run build:icons && npm run build:sb",
-    "build:tokens": "rimraf build/tokens && node .tasks/build-tokens.js",
+    "build": "env-cmd -r ./.brands.json -e bourgeois --use-shell \"npm run build:complete\" && env-cmd -r ./.brands.json -e circuitous --use-shell \"npm run build:complete\"",
+    "build:complete": "npm run build:tokens && npm run build:icons && npm run build:sb",
     "build:icons": "node .tasks/build-icons.js",
-    "build:sb": "rimraf build/storybook && build-storybook -c .storybook -o build/storybook",
-    "deploy": "now build/storybook --name=my-datepicker",
+    "build:sb": "rimraf $PATH_SB && build-storybook -c .storybook -o $PATH_SB",
+    "build:tokens": "rimraf $PATH_TOKENS && node .tasks/build-tokens.js",
+    "deploy": "now build/storybook/bourgeois --name=my-datepicker-bourgeois && now build/storybook/circuitous --name=my-datepicker-circuitous",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint src/**/*.js src/**/*.jsx --fix && eslint .tasks/**/*.js --no-ignore --fix && eslint .storybook/**/*.js .storybook/**/*.js --no-ignore --fix",
     "lint:css": "stylelint 'src/**/*.scss' --fix",
-    "start": "start-storybook",
+    "start": "npm run build:tokens && npm run build:icons && start-storybook",
+    "start:bourgeois": "env-cmd -r ./.brands.json -e bourgeois --use-shell \"npm run start\"",
+    "start:circuitous": "env-cmd -r ./.brands.json -e circuitous --use-shell \"npm run start\"",
     "test": "jest"
   },
   "author": "Daniel Fornells",
@@ -29,6 +32,7 @@
     "css-loader": "^3.2.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
+    "env-cmd": "^10.0.1",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",
@@ -47,7 +51,8 @@
     "style-dictionary": "^2.8.2",
     "style-loader": "^1.0.0",
     "stylelint": "^11.1.1",
-    "stylelint-config-recommended": "^3.0.0"
+    "stylelint-config-recommended": "^3.0.0",
+    "webpack": "^4.41.2"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
