@@ -1,0 +1,48 @@
+{
+  "size": {
+    "breakpoint": {
+      "foundation": {
+        "zero": {
+          "value": 0.0625,
+          "comment": "1px"
+        },
+        "xxs": {
+          "value": 22.5,
+          "comment": "360px"
+        },
+        "xs": {
+          "value": 30,
+          "comment": "480px"
+        },
+        "sm": {
+          "value": 37.5,
+          "comment": "600px"
+        },
+        "sml": {
+          "value": 52.5,
+          "comment": "840px"
+        },
+        "md": {
+          "value": 60,
+          "comment": "960px"
+        },
+        "lg": {
+          "value": 80,
+          "comment": "1280px"
+        },
+        "xl": {
+          "value": 90,
+          "comment": "1440px"
+        },
+        "xxl": {
+          "value": 100,
+          "comment": "1600px"
+        },
+        "xxxl": {
+          "value": 120,
+          "comment": "1920px"
+        }
+      }
+    }
+  }
+}

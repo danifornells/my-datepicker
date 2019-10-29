@@ -16,7 +16,7 @@
     "spacing": {
       "calendar": {
         "dateCell": {
-          "value": "3"
+          "value": 3
         }
       }
     }
@@ -53,9 +53,9 @@
     }
   },
   "shape": {
-    "calendar": {
-      "date": {
-        "base": {
+    "boundingBox": {
+      "calendar": {
+        "date": {
           "value": "circle",
           "comment": "One of [\"circle\", \"square\"]"
         }

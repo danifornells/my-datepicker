@@ -13,7 +13,7 @@ module.exports = (brand) => ({
   ],
   platforms: {
     json: {
-      transformGroup: 'js',
+      transformGroup: 'json',
       buildPath: `${buildPath}/`,
       files: [
         ...keywordOutput(keywords, 'json', 'json'),
@@ -43,7 +43,7 @@ module.exports = (brand) => ({
       transformGroup: 'scss',
       buildPath: `${buildPath}/`,
       files: [
-        ...keywordOutput(keywords, 'scss/map-deep', 'scss', true),
+        ...keywordOutput(keywords, 'scss/variables', 'scss', true),
         {
           destination: 'tokens.scss',
           format: 'scss/map-deep',

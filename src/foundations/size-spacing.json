@@ -2,12 +2,12 @@
   "size": {
     "spacing": {
       "foundation": {
-        "xs"   : {"value": "0.25"},
-        "s"    : {"value": "0.5"},
-        "m"    : {"value": "1"},
-        "l"    : {"value": "1.5"},
-        "xl"   : {"value": "2"},
-        "xxl"  : {"value": "4"},
+        "xs"   : {"value": 0.25},
+        "s"    : {"value": 0.5},
+        "m"    : {"value": 1},
+        "l"    : {"value": 1.5},
+        "xl"   : {"value": 2},
+        "xxl"  : {"value": 4},
         "base"  : {
           "value": "{size.spacing.foundation.m.value}",
           "comment": "The default spacing unit"

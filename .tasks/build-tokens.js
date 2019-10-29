@@ -2,6 +2,7 @@
 const StyleDictionary = require('style-dictionary');
 const customTemplates = require('./style-dictionary/templates');
 const customFilters = require('./style-dictionary/filters');
+const jsonTransformGroup = require('./style-dictionary/json-transform-group');
 const keywords = require('./style-dictionary/keywords').KEYWORDS;
 const keywordFilters = require('./style-dictionary/keywords').FILTERS(keywords);
 const brand = require('./brand-resolver');
@@ -24,6 +25,9 @@ Object.entries(keywordFilters).forEach(([name, matcher]) => {
 Object.entries(customTemplates).forEach(([name, formatter]) => {
   StyleDictionaryBuilder.registerFormat({ name, formatter });
 });
+
+// Register custom transform groups
+StyleDictionaryBuilder.registerTransformGroup(jsonTransformGroup);
 
 // Build current brand Design Tokens
 StyleDictionaryBuilder.buildAllPlatforms();

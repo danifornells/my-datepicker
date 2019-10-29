@@ -1,6 +1,6 @@
 const { isNotFont } = require('./filters');
 
-const KEYWORDS = ['foundation', 'calendar'];
+const KEYWORDS = ['foundation', 'calendar', 'popover'];
 
 const getFiltersFromKeywords = (keywords) => (
   /* eslint-disable no-param-reassign */
