@@ -1,0 +1,85 @@
+{
+  "size": {
+    "padding": {
+      "popover": {
+        "box": {
+          "value": "{size.spacing.foundation.l.value}"
+        }
+      }
+    },
+    "radius": {
+      "popover": {
+        "box": {
+          "value": 0.5
+        }
+      }
+    },
+    "offset": {
+      "popover": {
+        "box": {
+          "value": 0.5
+        }
+      }
+    }
+  },
+  "color": {
+    "background": {
+      "popover": {
+        "box": {
+          "value": "{color.foundation.neutral.white.base.value}"
+        }
+      }
+    },
+    "border": {
+      "popover": {
+        "box": {
+          "value": "{color.foundation.neutral.grey.base.value}"
+        }
+      }
+    }
+  },
+  "time": {
+    "transition": {
+      "popover": {
+        "box": {
+          "value": 300
+        }
+      }
+    }
+  },
+  "config": {
+    "borderEnable": {
+      "popover": {
+        "box": {
+          "value": true
+        }
+      }
+    },
+    "shadow": {
+      "popover": {
+        "box": {
+          "value": "{config.shadow.foundation.discrete.value}"
+        }
+      }
+    },
+    "floatsFrom": {
+      "popover": {
+        "box": {
+          "value": ["zero", "xxs", "xs", "sm", "sml"]
+        }
+      }
+    },
+    "easing": {
+      "popover": {
+        "box": {
+          "in": {
+            "value": "{config.easing.foundation.overshoot.value}"
+          },
+          "out": {
+            "value": "{config.easing.foundation.anticipate.value}"
+          }
+        }
+      }
+    }
+  }
+}

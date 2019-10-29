@@ -1,0 +1,18 @@
+/**
+ * General Tokens
+ *
+ * [NOTE]: 'bourgeois' is the default brand. Used here for syntax highLighting.
+ *   On compilation, will be replaced by configured brand.
+ */
+@import "../../../build/tokens/bourgeois/tokens";
+
+/** Shared Functions */
+@import "../functions/map-deep-get";
+
+
+/* Creates a media-query from given breakpoint */
+@mixin media-from($breakpoint) {
+  @media (min-width: map-deep-get($tokens, 'size', 'breakpoint', 'foundation', $breakpoint)) {
+    @content;
+  }
+}

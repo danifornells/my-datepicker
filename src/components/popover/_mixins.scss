@@ -1,0 +1,80 @@
+/**
+ * Component Tokens
+ *
+ * [NOTE]: 'bourgeois' is the default brand. Used here for syntax highLighting.
+ *   On compilation, will be replaced by configured brand.
+ */
+@import "../../../build/tokens/bourgeois/tokens.popover";
+
+
+/**
+ * PopoverBox Floating Styles
+ */
+@mixin let-popover-box-to-float() {
+  position: absolute;
+  left: 0;
+  right: initial;
+  bottom: initial;
+  top: calc(100% + #{$size-offset-popover-box});
+  border-radius: $size-radius-popover-box;
+  max-height: initial;
+}
+
+
+/**
+ * PopoverBox TopLeft Arrow Styles
+ */
+@mixin add-popover-top-left-arrow() {
+  // Arrow styles
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: .6rem;
+    height: .6rem;
+    background-color: $color-background-popover-box;
+    position: absolute;
+
+    // Border config
+    @if $config-border-enable-popover-box == true {
+      border: solid 1px $color-border-popover-box;
+    }
+  }
+  &::before {
+    left: 1rem;
+    top: -.3rem;
+    transform: rotate(45deg);
+  }
+  &::after {
+    border-width: 0;
+    width: 2rem;
+    top: 0;
+    left: $size-radius-popover-box;
+  }
+}
+
+
+/**
+ * PopoverBox Lifting from top
+ */
+@mixin let-popover-appear-from-top() {
+  transform: translateY(-25%);
+  &.is-going-to-appear,
+  &.is-going-to-enter {
+    transform: translateY(-25%);
+
+  }
+  &.is-appearing,
+  &.is-entering,
+  &.had-appeared,
+  &.had-entered,
+  &.is-going-to-exit {
+    transform: translateY(0);
+  }
+  &.is-exiting {
+    transform: translateY(-25%);
+  }
+  &.had-exited {
+    transform: translateY(-25%);
+  }
+}

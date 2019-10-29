@@ -5,6 +5,9 @@
         "discrete": {
           "value": "1px 1px 10px 0px rgba(#000000, 0.1)"
         },
+        "contrasted": {
+          "value": "1px 1px 10px 0px rgba(#000000, 0.35)"
+        },
         "sunken": {
           "value": "inset 0px 0px 8px 0px rgba(#000000, 0.14)"
         }

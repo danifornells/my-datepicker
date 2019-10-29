@@ -60,5 +60,8 @@
   },
   "jest": {
     "testRegex": ".*.unit\\.js$"
+  },
+  "dependencies": {
+    "react-transition-group": "^4.3.0"
   }
 }
