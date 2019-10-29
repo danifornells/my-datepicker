@@ -1,13 +1,17 @@
-
-/* Calendar Tokens */
+/**
+ * Component Tokens
+ *
+ * [NOTE]: 'bourgeois' is the default brand. Used here for syntax highLighting.
+ *   On compilation, will be replaced by configured brand.
+ */
 @import "../../../build/tokens/bourgeois/tokens.calendar";
 
-/* Shared Mixins */
+/** Mixins */
+@import "../../styles/mixins/clear-button-styles";
 
-@import "../../styles/mixins";
-
-/* Calendar Styles */
-
+/**
+ * Component Styles
+ */
 .Calendar {
   display: inline-block;
   height: calc(#{$size-spacing-calendar-date-cell} * 8);
@@ -71,12 +75,12 @@
 
     // Apply $shape-calendar-date-base or warns if contains an invalid value
 
-    @if $shape-calendar-date-base == "circle" {
+    @if $shape-bounding-box-calendar-date == "circle" {
       border-radius: 50%;
     }
 
-    @else if $shape-calendar-date-base != "square" {
-      @warn "$shape-calendar-date-base: `#{$shape-calendar-date-base}` is not one of ['circle', 'square']";
+    @else if $shape-bounding-box-calendar-date != "square" {
+      @warn "$shape-calendar-date-base: `#{$shape-bounding-box-calendar-date}` is not one of ['circle', 'square']";
     }
 
     &:hover {

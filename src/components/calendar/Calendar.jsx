@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CalendarDate from './CalendarDate';
 import IconChevronLeft from '../icons/IconChevronLeft';
 import IconChevronRight from '../icons/IconChevronRight';
-import * as calendarLocales from './Calendar.locales';
+import * as CALENDAR_LOCALES from './Calendar.locales';
 import {
   areDatesInSameDay,
   areDatesInSameMonth,
@@ -16,8 +16,6 @@ import {
   offsetBy,
   suggestMonthToBeShown,
 } from '../../helpers/dates';
-
-import '../../styles/base.scss';
 import STYLES from './Calendar.scss';
 
 const { string, oneOf, func } = PropTypes;
@@ -32,7 +30,7 @@ class Calendar extends Component {
     const {
       language, value, min, max,
     } = props;
-    this.locales = calendarLocales[language];
+    this.locales = CALENDAR_LOCALES[language];
     this.minDate = min && isValidDateString(min) ? dateStringToDate(min) : null;
     this.maxDate = max && isValidDateString(max) ? dateStringToDate(max) : null;
     const valueDate = value && isValidDateString(value) ? dateStringToDate(value) : null;
@@ -192,7 +190,7 @@ Calendar.propTypes = {
   /** ClassName/s to be appended */
   className: string,
   /** Language will set locale settings */
-  language: oneOf(Object.keys(calendarLocales)),
+  language: oneOf(Object.keys(CALENDAR_LOCALES)),
   /** Invoked when a new date is selected */
   onDateChange: func,
 };
