@@ -5,7 +5,7 @@ import STYLES from './TokensTable.scss';
 const c = (className) => STYLES[className] || 'UNKNOWN';
 
 const TokensTable = ({tokens}) => (
-  <div>
+  <div className={c('TokensTable')}>
     <h1 className={c('TokensTable-Heading')}>Style tokens</h1>
     <table className="info-table">
       <thead>
