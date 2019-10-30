@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions';
 import tokensProcessor from '../../../.storybook/tokens-processor';
 import PropTableWithTokens from '../../../.storybook/components/PropTableWithTokens';
 import Calendar from './Calendar';
-import * as CALENDAR_LOCALES from './Calendar.locales';
+import * as DATE_LOCALES from '../../locales/date';
 import '../../styles/base.scss';
 
 /* eslint-disable import/no-dynamic-require, no-undef */
@@ -26,7 +26,7 @@ storiesOf('Components|Calendar', module)
       const min = text('min', '');
       const max = text('max', '');
       const value = text('value', '2017-10-01');
-      const language = select('language', Object.keys(CALENDAR_LOCALES), 'en');
+      const language = select('language', Object.keys(DATE_LOCALES), 'en');
       const className = text('className', '');
       const key = [min, max, language, value].filter(Boolean).join('_');
 
@@ -67,7 +67,7 @@ storiesOf('Components|Calendar', module)
       const min = text('min', '2017-09-21');
       const max = text('max', '2017-12-20');
       const value = text('value', '');
-      const language = select('language', Object.keys(CALENDAR_LOCALES), 'en');
+      const language = select('language', Object.keys(DATE_LOCALES), 'en');
       const className = text('className', '');
       const key = [min, max, language, value].filter(Boolean).join('_');
 

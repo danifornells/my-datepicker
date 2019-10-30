@@ -8,12 +8,12 @@ const useCloseRequest = (onCloseRequest, innerRef, open) => {
   useEffect(
     () => {
       if (innerRef.current) {
-        document.addEventListener('click', handleClick);
+        document.addEventListener('mousedown', handleClick);
         document.addEventListener('keydown', handleKeydown);
       }
 
       return () => {
-        document.removeEventListener('click', handleClick);
+        document.removeEventListener('mousedown', handleClick);
         document.removeEventListener('keydown', handleKeydown);
       }
 

@@ -29,13 +29,14 @@ const TRANSITION_CLASSNAMES = {
 
 const PopoverBox = (props) => {
   const {
-    open, floatsFrom, children, className, onCloseRequest,
+    open, floatsFrom, children, className, onCloseRequest, contentCentered,
   } = props;
   const innerRef = useRef(null);
   useCloseRequest(onCloseRequest, innerRef, open);
   const classNames = [
     c('PopoverBox'),
     c(`floats-from-${floatsFrom}`),
+    contentCentered ? c('is-content-centered') : '',
     className,
   ].join(' ');
   return (
@@ -62,6 +63,8 @@ PopoverBox.propTypes = {
   floatsFrom: oneOf(FLOATS_FROM_BREAKPOINTS),
   /** Children */
   children: node,
+  /** Will horizontally center content */
+  contentCentered: bool,
   /** ClassName/s to be appended */
   className: string,
   /** Invoked when close is requested by ESC key or outer click */
@@ -72,6 +75,7 @@ PopoverBox.defaultProps = {
   open: false,
   floatsFrom: 'xs',
   children: null,
+  contentCentered: false,
   className: '',
   onCloseRequest: () => {},
 };

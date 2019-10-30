@@ -16,6 +16,7 @@ import {
   isBefore,
   isAfter,
   suggestMonthToBeShown,
+  getHumanizedDate,
 } from './dates';
 
 describe('isDate', () => {
@@ -404,5 +405,18 @@ describe('suggestMonthToBeShown', () => {
   });
   test('...more tests could be done here', () => {
     expect(true).toBe(true);
+  });
+});
+
+describe('getHumanizedDate', () => {
+  test('given a valid Date|DateString, returns the expected string in english', () => {
+    const date = '2017-10-01';
+    const expectedResult = 'October 1, 2017';
+    expect(getHumanizedDate(date)).toEqual(expectedResult);
+  });
+  test('given a valid Date|DateString, and locales, returns the expected string', () => {
+    const date = '2017-10-01';
+    const expectedResult = '1 de octubre de 2017';
+    expect(getHumanizedDate(date, 'es')).toEqual(expectedResult);
   });
 });

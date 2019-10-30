@@ -3,7 +3,7 @@
     "padding": {
       "popover": {
         "box": {
-          "value": "{size.spacing.foundation.l.value}"
+          "value": "{size.spacing.foundation.m.value}"
         }
       }
     },

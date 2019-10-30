@@ -54,6 +54,11 @@
     }
   }
 
+  // Centered content
+  &.is-content-centered {
+    text-align: center;
+  }
+
   // Transition states
   &.is-going-to-appear,
   &.is-going-to-enter {

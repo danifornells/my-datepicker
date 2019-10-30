@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CalendarDate from './CalendarDate';
 import IconChevronLeft from '../icons/IconChevronLeft';
 import IconChevronRight from '../icons/IconChevronRight';
-import * as CALENDAR_LOCALES from './Calendar.locales';
+import * as DATE_LOCALES from '../../locales/date';
 import {
   areDatesInSameDay,
   areDatesInSameMonth,
@@ -16,6 +16,7 @@ import {
   offsetBy,
   suggestMonthToBeShown,
 } from '../../helpers/dates';
+import optionalDateString from '../../prop-types/optional-date-string';
 import STYLES from './Calendar.scss';
 
 const { string, oneOf, func } = PropTypes;
@@ -30,7 +31,7 @@ class Calendar extends Component {
     const {
       language, value, min, max,
     } = props;
-    this.locales = CALENDAR_LOCALES[language];
+    this.locales = DATE_LOCALES[language];
     this.minDate = min && isValidDateString(min) ? dateStringToDate(min) : null;
     this.maxDate = max && isValidDateString(max) ? dateStringToDate(max) : null;
     const valueDate = value && isValidDateString(value) ? dateStringToDate(value) : null;
@@ -163,34 +164,17 @@ class Calendar extends Component {
   }
 }
 
-/**
- * [𝗣𝗩] Custom PropType validation for DateString
- * - Passes if it's falsely value
- * - Passes if it's a valid DateString
- */
-const OPTIONAL_DATESTRING = (props, propName, componentName) => {
-  const date = props[propName];
-  if (date === '' || date === null || typeof date === 'undefined') return null;
-  return (typeof date !== 'string' || !isValidDateString(date))
-    ? new Error(
-      `Given '${date}' seems to be an invalid prop ${propName} supplied to ${componentName}. `,
-      'A valid dateString (YYYY-MM-DD) is expected.',
-    )
-    : null;
-};
-
-
 Calendar.propTypes = {
   /** Min date as DateString */
-  min: OPTIONAL_DATESTRING,
+  min: optionalDateString,
   /** Max date as DateString */
-  max: OPTIONAL_DATESTRING,
+  max: optionalDateString,
   /** Current date as DateString */
-  value: OPTIONAL_DATESTRING,
+  value: optionalDateString,
   /** ClassName/s to be appended */
   className: string,
   /** Language will set locale settings */
-  language: oneOf(Object.keys(CALENDAR_LOCALES)),
+  language: oneOf(Object.keys(DATE_LOCALES)),
   /** Invoked when a new date is selected */
   onDateChange: func,
 };

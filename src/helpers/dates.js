@@ -295,6 +295,24 @@ const suggestMonthToBeShown = (value, min, max) => {
   return getMonthEdges(result)[0];
 };
 
+/**
+ * Returns humanized string for given date using given locales.
+ *
+ * @param {Date|DateString} date
+ * @param {String} [locales]
+ *
+ * @returns {String}
+ */
+const getHumanizedDate = (date, locales = 'en') => {
+  const dateAsDate = dateStringToDate(date);
+  const humanizedConfig = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
+  return dateAsDate.toLocaleDateString(locales, humanizedConfig);
+};
+
 export {
   isDate,
   isValidDate,
@@ -312,4 +330,5 @@ export {
   isBefore,
   isAfter,
   suggestMonthToBeShown,
+  getHumanizedDate,
 };
