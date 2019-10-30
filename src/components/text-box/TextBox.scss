@@ -1,0 +1,60 @@
+/**
+ * Component Tokens
+ *
+ * [NOTE]: 'bourgeois' is the default brand. Used here for syntax highLighting.
+ *   On compilation, will be replaced by configured brand.
+ */
+@import "../../../build/tokens/bourgeois/tokens.text-box";
+
+/**
+ * TextBox Styles
+ */
+.TextBox {
+  display: inline-flex;
+  flex-direction: column;
+
+  &-label {
+    color: $color-text-text-box-label;
+    font-size: $size-font-text-box-label;
+    display: block;
+    text-transform: uppercase;
+    height: 1.5rem;
+    text-indent: $size-radius-text-box-input;
+  }
+
+  &-input {
+    background-color: $color-background-text-box-input;
+    color: $color-text-text-box-input-content;
+    font-size: $size-font-text-box-input;
+    box-shadow: $config-shadow-text-box-input;
+    padding: $size-padding-text-box-input-vertical $size-padding-text-box-input-horizontal;
+    border-radius: $size-radius-text-box-input;
+    transition-property: border-color;
+    transition-duration: .2s;
+
+    // Border config
+    @if $config-border-enable-text-box-input == true {
+      border: solid 1px $color-border-text-box-input-base;
+      padding: calc(#{$size-padding-text-box-input-vertical} - 2px) calc(#{$size-padding-text-box-input-horizontal} - 2px);
+    } @else if $config-border-enable-text-box-input == false {
+      border: none;
+    } @else if $config-border-enable-text-box-input != false {
+      @warn "$config-border-enable-text-box-input: `#{$config-border-enable-text-box-input}` is not one of [true, false]";
+    }
+
+    &::placeholder {
+      opacity: 1;
+      color: $color-text-text-box-input-placeholder;
+    }
+
+    &:focus {
+      border-color: $color-border-text-box-input-focused;
+    }
+  }
+
+  &.is-disabled {
+    opacity: $config-opacity-text-box-disabled;
+    pointer-events: none;
+  }
+
+}

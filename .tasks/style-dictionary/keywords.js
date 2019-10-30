@@ -1,6 +1,7 @@
 const { isNotFont } = require('./filters');
+const stringFromCamelCase = require('../helpers/string-from-camel-case');
 
-const KEYWORDS = ['foundation', 'calendar', 'popover'];
+const KEYWORDS = ['foundation', 'calendar', 'popover', 'textBox'];
 
 const getFiltersFromKeywords = (keywords) => (
   /* eslint-disable no-param-reassign */
@@ -15,7 +16,7 @@ const getFiltersFromKeywords = (keywords) => (
 const getOutputFromKeywords = (keywords, format, extension, excludeFonts = false) => (
   keywords.map((keyword) => ({
     format,
-    destination: `tokens.${keyword}.${extension}`,
+    destination: `tokens.${stringFromCamelCase(keyword)}.${extension}`,
     filter: excludeFonts
       ? `keyword/${keyword}-no-fonts`
       : `keyword/${keyword}`,

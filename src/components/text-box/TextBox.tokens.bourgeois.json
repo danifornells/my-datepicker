@@ -1,0 +1,92 @@
+{
+  "size": {
+    "font": {
+      "textBox": {
+        "label": {
+          "value": "{size.font.foundation.s.value}"
+        },
+        "input": {
+          "value": "{size.font.foundation.l.value}"
+        }
+      }
+    },
+    "padding": {
+      "textBox": {
+        "input": {
+          "horizontal": {
+            "value": "{size.spacing.foundation.m.value}"
+          },
+          "vertical": {
+            "value": "{size.spacing.foundation.s.value}"
+          }
+        }
+      }
+    },
+    "radius": {
+      "textBox": {
+        "input": {
+          "value": 0.5
+        }
+      }
+    }
+  },
+  "color": {
+    "background": {
+      "textBox": {
+        "input": {
+          "value": "{color.foundation.neutral.white.base.value}"
+        }
+      }
+    },
+    "border": {
+      "textBox": {
+        "input": {
+          "base": {
+            "value": "{color.foundation.neutral.grey.base.value}"
+          },
+          "focused": {
+            "value": "{color.foundation.state.info.base.value}"
+          }
+        }
+      }
+    },
+    "text": {
+      "textBox": {
+        "label": {
+          "value": "{color.foundation.neutral.grey.semiDark.value}"
+        },
+        "input": {
+          "content": {
+            "value": "{color.foundation.neutral.grey.dark.value}"
+          },
+          "placeholder": {
+            "value": "{color.foundation.neutral.grey.base.value}"
+          }
+        }
+      }
+    }
+  },
+  "config": {
+    "borderEnable": {
+      "textBox": {
+        "input": {
+          "value": true
+        }
+      }
+    },
+    "shadow": {
+      "textBox": {
+        "input": {
+          "value": "{config.shadow.foundation.sunken.value}"
+        }
+      }
+    },
+    "opacity": {
+      "textBox": {
+        "disabled": {
+          "value": 0.5
+        }
+      }
+    }
+  }
+}
