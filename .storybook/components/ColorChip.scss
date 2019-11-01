@@ -1,0 +1,46 @@
+/* TokensTable Styles */
+.ColorChip {
+  $_color-chip-border: dashed 1px #c6c6c6;
+  $_color-chip-padding: .5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: $_color-chip-padding;
+  text-align: center;
+  border: $_color-chip-border;
+  border-radius: .25rem;
+  overflow: hidden;
+
+  &-grid {
+    display: grid;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+  }
+
+  &-sample {
+    flex-basis: calc(100% + #{$_color-chip-padding * 2});
+    height: 7rem;
+    border-bottom: $_color-chip-border;
+    margin: -#{$_color-chip-padding} -#{$_color-chip-padding} 0;
+  }
+
+  &-name,
+  &-value,
+  &-path {
+    font-family: monospace;
+    display: block;
+  }
+  &-name {
+    font-size: .75rem;
+  }
+  &-value {
+    font-size: 1.125rem;
+  }
+  &-path {
+    font-size: .625rem;
+    opacity: .625;
+  }
+}
