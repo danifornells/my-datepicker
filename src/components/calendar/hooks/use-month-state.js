@@ -14,8 +14,8 @@ const useMonthState = ({currentValue, minDate, maxDate, language}) => {
     return {
       currentMonth,
       currentMonthName: `${months[currentMonth.getMonth()]} ${currentMonth.getFullYear()}`,
-      prevMonthDisabled: minDate && areDatesInSameMonth(currentMonth, minDate),
-      nextMonthDisabled: maxDate && areDatesInSameMonth(currentMonth, maxDate),
+      prevMonthDisabled: !!(minDate && areDatesInSameMonth(currentMonth, minDate)),
+      nextMonthDisabled: !!(maxDate && areDatesInSameMonth(currentMonth, maxDate)),
     }
   };
 
