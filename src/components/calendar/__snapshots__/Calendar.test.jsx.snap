@@ -1,0 +1,683 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calendar should match rendered snapshot 1`] = `
+<div
+  class="Calendar "
+>
+  <div
+    class="Calendar-heading"
+  >
+    <button
+      class="Calendar-navButton"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon "
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15.254 16.089c.369.333.398.904.065 1.274a.898.898 0 01-1.27.066l-5.303-4.795a.904.904 0 01.002-1.343l5.256-4.72a.898.898 0 011.271.07c.332.372.3.942-.07 1.275l-4.18 3.753a.4.4 0 000 .594l4.229 3.826z"
+        />
+      </svg>
+    </button>
+    <h1
+      class="Calendar-currentMonth"
+    >
+      November 2019
+    </h1>
+    <button
+      class="Calendar-navButton"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon "
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8.746 16.089l4.23-3.825a.4.4 0 00-.001-.595l-4.18-3.753a.904.904 0 01-.07-1.275.898.898 0 011.27-.07l5.256 4.72c.399.358.4.983.003 1.342L9.952 17.43a.898.898 0 01-1.271-.066.904.904 0 01.065-1.274z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    class="Calendar-page"
+  >
+    <span
+      aria-hidden="true"
+      class="Calendar-weekDay is-weekend"
+    >
+      Sun
+    </span>
+    <span
+      aria-hidden="true"
+      class="Calendar-weekDay "
+    >
+      Mon
+    </span>
+    <span
+      aria-hidden="true"
+      class="Calendar-weekDay "
+    >
+      Tue
+    </span>
+    <span
+      aria-hidden="true"
+      class="Calendar-weekDay "
+    >
+      Wed
+    </span>
+    <span
+      aria-hidden="true"
+      class="Calendar-weekDay "
+    >
+      Thu
+    </span>
+    <span
+      aria-hidden="true"
+      class="Calendar-weekDay "
+    >
+      Fri
+    </span>
+    <span
+      aria-hidden="true"
+      class="Calendar-weekDay is-weekend"
+    >
+      Sat
+    </span>
+    <button
+      class="Calendar-date is-from-another-month "
+      disabled=""
+      type="button"
+    >
+      27
+    </button>
+    <button
+      class="Calendar-date is-from-another-month "
+      disabled=""
+      type="button"
+    >
+      28
+    </button>
+    <button
+      class="Calendar-date is-from-another-month "
+      disabled=""
+      type="button"
+    >
+      29
+    </button>
+    <button
+      class="Calendar-date is-from-another-month "
+      disabled=""
+      type="button"
+    >
+      30
+    </button>
+    <button
+      class="Calendar-date is-from-another-month "
+      disabled=""
+      type="button"
+    >
+      31
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      1
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      2
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      3
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      4
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      5
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      6
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      7
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      8
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      9
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      10
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      11
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      12
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      13
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      14
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      15
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      16
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      17
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      18
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      19
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      20
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      21
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      22
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      23
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      24
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      25
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      26
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      27
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      28
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      29
+    </button>
+    <button
+      class="Calendar-date  "
+      type="button"
+    >
+      30
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Calendar should match shallow snapshot 1`] = `
+<div
+  className="Calendar "
+>
+  <div
+    className="Calendar-heading"
+  >
+    <button
+      className="Calendar-navButton"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <IconChevronLeft
+        className=""
+        size="medium"
+      />
+    </button>
+    <h1
+      className="Calendar-currentMonth"
+    >
+      November 2019
+    </h1>
+    <button
+      className="Calendar-navButton"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <IconChevronRight
+        className=""
+        size="medium"
+      />
+    </button>
+  </div>
+  <div
+    className="Calendar-page"
+  >
+    <span
+      aria-hidden="true"
+      className="Calendar-weekDay is-weekend"
+      key="Sun"
+    >
+      Sun
+    </span>
+    <span
+      aria-hidden="true"
+      className="Calendar-weekDay "
+      key="Mon"
+    >
+      Mon
+    </span>
+    <span
+      aria-hidden="true"
+      className="Calendar-weekDay "
+      key="Tue"
+    >
+      Tue
+    </span>
+    <span
+      aria-hidden="true"
+      className="Calendar-weekDay "
+      key="Wed"
+    >
+      Wed
+    </span>
+    <span
+      aria-hidden="true"
+      className="Calendar-weekDay "
+      key="Thu"
+    >
+      Thu
+    </span>
+    <span
+      aria-hidden="true"
+      className="Calendar-weekDay "
+      key="Fri"
+    >
+      Fri
+    </span>
+    <span
+      aria-hidden="true"
+      className="Calendar-weekDay is-weekend"
+      key="Sat"
+    >
+      Sat
+    </span>
+    <CalendarDate
+      dateNumber={27}
+      isDisabled={true}
+      isFromAnotherMonth={true}
+      isSelected={null}
+      key="1572127200000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={28}
+      isDisabled={true}
+      isFromAnotherMonth={true}
+      isSelected={null}
+      key="1572217200000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={29}
+      isDisabled={true}
+      isFromAnotherMonth={true}
+      isSelected={null}
+      key="1572303600000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={30}
+      isDisabled={true}
+      isFromAnotherMonth={true}
+      isSelected={null}
+      key="1572390000000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={31}
+      isDisabled={true}
+      isFromAnotherMonth={true}
+      isSelected={null}
+      key="1572476400000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={1}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1572562800000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={2}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1572649200000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={3}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1572735600000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={4}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1572822000000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={5}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1572908400000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={6}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1572994800000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={7}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1573081200000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={8}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1573167600000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={9}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1573254000000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={10}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1573340400000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={11}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1573426800000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={12}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1573513200000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={13}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1573599600000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={14}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1573686000000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={15}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1573772400000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={16}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1573858800000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={17}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1573945200000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={18}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1574031600000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={19}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1574118000000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={20}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1574204400000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={21}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1574290800000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={22}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1574377200000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={23}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1574463600000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={24}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1574550000000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={25}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1574636400000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={26}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1574722800000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={27}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1574809200000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={28}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1574895600000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={29}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1574982000000"
+      onClick={[Function]}
+    />
+    <CalendarDate
+      dateNumber={30}
+      isDisabled={false}
+      isFromAnotherMonth={false}
+      isSelected={null}
+      key="1575068400000"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;

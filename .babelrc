@@ -4,6 +4,7 @@
       "useBuiltIns": "usage",
       "corejs": 3,
       "debug": false
-    }]
+    }],
+    "@babel/preset-react"
   ]
 }
