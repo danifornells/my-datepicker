@@ -20,7 +20,7 @@
 
   // Scale down if does not fit on viewport
   $_calendar-viewport-min: 20rem;
-  $_calendar-viewport-limit: $size-spacing-calendar-date-cell * 8;
+  $_calendar-viewport-limit: ($size-spacing-calendar-date-cell * 7) + 2rem;
   $_calendar-scale: $_calendar-viewport-min / $_calendar-viewport-limit;
   $_calendar-width: $size-spacing-calendar-date-cell * 7;
   @media (max-width: $_calendar-viewport-limit) {

@@ -37,7 +37,11 @@ dd {
   margin: 0;
 }
 
-/* Set core body defaults */
+/* Set core html & body defaults */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   line-height: 1.5;

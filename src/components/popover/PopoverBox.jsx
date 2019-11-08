@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 import useCloseRequest from './hooks/use-close-request';
+import useDisableDocumentScroll from './hooks/use-disable-document-scroll'
 import STYLES from './Popover.scss';
 
 /* eslint-disable import/no-dynamic-require, no-undef */
@@ -29,10 +30,12 @@ const TRANSITION_CLASSNAMES = {
 
 const PopoverBox = (props) => {
   const {
-    open, floatsFrom, children, className, onCloseRequest, contentCentered,
+    open, floatsFrom, children, className, onCloseRequest, contentCentered, onRefResolved,
   } = props;
   const innerRef = useRef(null);
   useCloseRequest(onCloseRequest, innerRef, open);
+  useDisableDocumentScroll(innerRef, open);
+  useEffect(()=> {onRefResolved(innerRef)}, [innerRef]);
   const classNames = [
     c('PopoverBox'),
     c(`floats-from-${floatsFrom}`),
@@ -69,6 +72,8 @@ PopoverBox.propTypes = {
   className: string,
   /** Invoked when close is requested by ESC key or outer click */
   onCloseRequest: func,
+  /** Invoked when reference is resolved/changed, as arg includes reference */
+  onRefResolved: func,
 };
 
 PopoverBox.defaultProps = {
@@ -78,6 +83,7 @@ PopoverBox.defaultProps = {
   contentCentered: false,
   className: '',
   onCloseRequest: () => {},
+  onRefResolved: () => {},
 };
 
 export default PopoverBox;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react'
 import PropTypes from 'prop-types';
 
 import TextBox from '../text-box/TextBox';
@@ -8,6 +8,7 @@ import Calendar from '../calendar/Calendar';
 import optionalDateString from '../../prop-types/optional-date-string';
 import useDateState from './hooks/use-date-state';
 import useOpenState from './hooks/use-open-state';
+import useEnsureTextBoxVisibility from './hooks/use-ensure-text-box-visibility'
 import * as DATE_LOCALES from '../../locales/date';
 
 const {
@@ -27,6 +28,9 @@ const DatePicker = (props) => {
     onChange,
   } = props;
   const [isOpened, setOpen] = useOpenState(false, onOpen, onClose);
+  const [popoverBoxRef, setPopoverBoxRef] = useState(null);
+  const rootElementRef = useRef(null);
+  useEnsureTextBoxVisibility(isOpened, rootElementRef, popoverBoxRef);
   const {
     currentDate,
     currentDateToShow,
@@ -40,34 +44,37 @@ const DatePicker = (props) => {
   );
 
   return (
-    <PopoverWrapper>
-      <TextBox
-        id={id}
-        disabled={disabled}
-        label={label}
-        name={name}
-        placeholder={placeholder}
-        required={required}
-        readOnly
-        value={currentDateToShow}
-        key={`${id}-${currentDate}`}
-        onFocus={() => setOpen(true)}
-        onClick={() => setOpen(true)}
-      />
-      <PopoverBox
-        open={isOpened}
-        contentCentered
-        onCloseRequest={() => setOpen(false)}
-      >
-        <Calendar
-          min={min}
-          max={max}
-          value={currentDate}
-          language={language}
-          onDateChange={(date) => setDate(date)}
+    <div ref={rootElementRef}>
+      <PopoverWrapper>
+        <TextBox
+          id={id}
+          disabled={disabled}
+          label={label}
+          name={name}
+          placeholder={placeholder}
+          required={required}
+          readOnly
+          value={currentDateToShow}
+          key={`${id}-${currentDate}`}
+          onFocus={() => setOpen(true)}
+          onClick={() => setOpen(true)}
         />
-      </PopoverBox>
-    </PopoverWrapper>
+        <PopoverBox
+          open={isOpened}
+          contentCentered
+          onCloseRequest={() => setOpen(false)}
+          onRefResolved={setPopoverBoxRef}
+        >
+          <Calendar
+            min={min}
+            max={max}
+            value={currentDate}
+            language={language}
+            onDateChange={(date) => setDate(date)}
+          />
+        </PopoverBox>
+      </PopoverWrapper>
+    </div>
   );
 };
 
