@@ -49,7 +49,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "jest-enzyme": "^7.1.2",
-    "jsdom": "^15.2.0",
+    "jsdom": "^16.5.0",
     "node-sass": "^4.12.0",
     "postcss-loader": "^3.0.0",
     "react-dom": "^16.10.2",
